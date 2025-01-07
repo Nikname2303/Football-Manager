@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-teams
+      author: Pavlo Betsa
+      changes:
+        - insert:
+            tableName: teams
+            columns:
+              - column:
+                  name: name
+                  value: 'Arsenal'
+              - column:
+                  name: commission
+                  value: 5
+              - column:
+                  name: bank_account_amount
+                  value: 5000000
+
+        - insert:
+            tableName: teams
+            columns:
+              - column:
+                  name: name
+                  value: 'Aston Villa'
+              - column:
+                  name: commission
+                  value: 3
+              - column:
+                  name: bank_account_amount
+                  value: 5000000

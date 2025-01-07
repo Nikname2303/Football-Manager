@@ -1,0 +1,260 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-players-from-aston-villa
+      author: Pavlo Betsa
+      changes:
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Emiliano Martínez'
+              - column:
+                  name: age
+                  value: 32
+              - column:
+                  name: experience
+                  value: 11
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Matty Cash'
+              - column:
+                  name: age
+                  value: 27
+              - column:
+                  name: experience
+                  value: 9
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Diego Carlos'
+              - column:
+                  name: age
+                  value: 32
+              - column:
+                  name: experience
+                  value: 10
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Ezri Konsa'
+              - column:
+                  name: age
+                  value: 27
+              - column:
+                  name: experience
+                  value: 6
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Tyrone Mings'
+              - column:
+                  name: age
+                  value: 32
+              - column:
+                  name: experience
+                  value: 9
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Ross Barkley'
+              - column:
+                  name: age
+                  value: 31
+              - column:
+                  name: experience
+                  value: 8
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'John McGinn'
+              - column:
+                  name: age
+                  value: 30
+              - column:
+                  name: experience
+                  value: 7
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Youri Tielemans'
+              - column:
+                  name: age
+                  value: 27
+              - column:
+                  name: experience
+                  value: 7
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Jhon Durán'
+              - column:
+                  name: age
+                  value: 21
+              - column:
+                  name: experience
+                  value: 1
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Emi Buendía'
+              - column:
+                  name: age
+                  value: 28
+              - column:
+                  name: experience
+                  value: 6
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Ollie Watkins'
+              - column:
+                  name: age
+                  value: 29
+              - column:
+                  name: experience
+                  value: 7
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Lucas Digne'
+              - column:
+                  name: age
+                  value: 32
+              - column:
+                  name: experience
+                  value: 8
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Pau Torres'
+              - column:
+                  name: age
+                  value: 27
+              - column:
+                  name: experience
+                  value: 6
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Joe Gauci'
+              - column:
+                  name: age
+                  value: 24
+              - column:
+                  name: experience
+                  value: 4
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Jaden Philogene-Bidace'
+              - column:
+                  name: age
+                  value: 23
+              - column:
+                  name: experience
+                  value: 3
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Kosta Nedeljković'
+              - column:
+                  name: age
+                  value: 19
+              - column:
+                  name: experience
+                  value: 0
+              - column:
+                  name: team_id
+                  value: 2
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Ian Maatsen'
+              - column:
+                  name: age
+                  value: 23
+              - column:
+                  name: experience
+                  value: 3
+              - column:
+                  name: team_id
+                  value: 2

@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-teams-table
+      author: Pavlo Betsa
+      changes:
+        - createTable:
+            tableName: teams
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: commission
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: bank_account_amount
+                  type: decimal(19,2)
+                  constraints:
+                    nullable: false

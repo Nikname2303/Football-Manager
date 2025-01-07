@@ -1,0 +1,292 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-players-from-arsenal-2024
+      author: Pavlo Betsa
+      changes:
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'William Saliba'
+              - column:
+                  name: age
+                  value: 23
+              - column:
+                  name: experience
+                  value: 3
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Kieran Tierney'
+              - column:
+                  name: age
+                  value: 27
+              - column:
+                  name: experience
+                  value: 9
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Ben White'
+              - column:
+                  name: age
+                  value: 27
+              - column:
+                  name: experience
+                  value: 9
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Thomas Partey'
+              - column:
+                  name: age
+                  value: 31
+              - column:
+                  name: experience
+                  value: 13
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Gabriel'
+              - column:
+                  name: age
+                  value: 26
+              - column:
+                  name: experience
+                  value: 6
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Bukayo Saka'
+              - column:
+                  name: age
+                  value: 23
+              - column:
+                  name: experience
+                  value: 5
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Martin Ødegaard'
+              - column:
+                  name: age
+                  value: 25
+              - column:
+                  name: experience
+                  value: 7
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Gabriel Jesus'
+              - column:
+                  name: age
+                  value: 27
+              - column:
+                  name: experience
+                  value: 8
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Gabriel Martinelli'
+              - column:
+                  name: age
+                  value: 23
+              - column:
+                  name: experience
+                  value: 5
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Jurrien Timber'
+              - column:
+                  name: age
+                  value: 23
+              - column:
+                  name: experience
+                  value: 5
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Jakub Kiwior'
+              - column:
+                  name: age
+                  value: 24
+              - column:
+                  name: experience
+                  value: 4
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Oleksandr Zinchenko'
+              - column:
+                  name: age
+                  value: 28
+              - column:
+                  name: experience
+                  value: 8
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Takehiro Tomiyasu'
+              - column:
+                  name: age
+                  value: 26
+              - column:
+                  name: experience
+                  value: 6
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Leandro Trossard'
+              - column:
+                  name: age
+                  value: 30
+              - column:
+                  name: experience
+                  value: 12
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Jorginho'
+              - column:
+                  name: age
+                  value: 33
+              - column:
+                  name: experience
+                  value: 14
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'David Raya'
+              - column:
+                  name: age
+                  value: 29
+              - column:
+                  name: experience
+                  value: 7
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Declan Rice'
+              - column:
+                  name: age
+                  value: 25
+              - column:
+                  name: experience
+                  value: 6
+              - column:
+                  name: team_id
+                  value: 1
+
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: name
+                  value: 'Kai Havertz'
+              - column:
+                  name: age
+                  value: 25
+              - column:
+                  name: experience
+                  value: 7
+              - column:
+                  name: team_id
+                  value: 1

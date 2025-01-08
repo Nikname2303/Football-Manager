@@ -9,20 +9,24 @@ import com.example.manager.model.Team;
 import com.example.manager.repository.PlayerRepository;
 import com.example.manager.repository.TeamRepository;
 import com.example.manager.service.TransferService;
+import com.example.manager.strategy.CommissionStrategy;
 import jakarta.persistence.EntityNotFoundException;
 import java.math.BigDecimal;
+import java.util.Map;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 @Service
 public class TransferServiceImpl implements TransferService {
-    private static final Long BASIC_TRANSFER_COST = 100000L;
     private final TeamRepository teamRepository;
     private final PlayerRepository playerRepository;
     private final TeamMapper teamMapper;
+    private final Map<String, CommissionStrategy> strategies;
 
     @Override
+    @Transactional
     public TeamResponseDto assignTeam(Long playerId, Long teamId) {
         Player player = playerRepository.findById(playerId).orElseThrow(
                 () -> new EntityNotFoundException(
@@ -44,6 +48,7 @@ public class TransferServiceImpl implements TransferService {
     }
 
     @Override
+    @Transactional
     public TeamResponseDto transfer(Long playerId, Long fromTeamId, Long toTeamId) {
         Player player = playerRepository.findById(playerId).orElseThrow(
                 () -> new EntityNotFoundException(
@@ -57,7 +62,8 @@ public class TransferServiceImpl implements TransferService {
                 () -> new EntityNotFoundException(
                         "You try to transfer player to non-existing team with id " + toTeamId)
         );
-        BigDecimal transferCost = getTransferCost(player, fromTeam);
+        BigDecimal transferCost = strategies.get("baseTransferCost")
+                .getBaseTransferCost(player, fromTeam);
         fromTeam.setBankAccountAmount(fromTeam.getBankAccountAmount().add(transferCost));
         if (fromTeam.getBankAccountAmount().compareTo(BigDecimal.ZERO) < 0) {
             throw new NotEnoughBankAmountException("You don't have enough money for that transfer");
@@ -68,13 +74,5 @@ public class TransferServiceImpl implements TransferService {
         teamRepository.save(toTeam);
         teamRepository.save(fromTeam);
         return teamMapper.toResponseDto(toTeam);
-    }
-
-    private BigDecimal getTransferCost(Player player, Team team) {
-        BigDecimal priceFromPlayer = BigDecimal.valueOf((player.getExperience()
-                * BASIC_TRANSFER_COST)
-                / player.getAge());
-        BigDecimal commission = BigDecimal.valueOf(team.getCommission() / 100);
-        return priceFromPlayer.add(priceFromPlayer.multiply(commission));
     }
 }

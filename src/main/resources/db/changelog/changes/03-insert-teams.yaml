@@ -11,7 +11,7 @@ databaseChangeLog:
                   value: 'Arsenal'
               - column:
                   name: commission
-                  value: 5
+                  value: 0.05
               - column:
                   name: bank_account_amount
                   value: 5000000
@@ -24,7 +24,7 @@ databaseChangeLog:
                   value: 'Aston Villa'
               - column:
                   name: commission
-                  value: 3
+                  value: 0.03
               - column:
                   name: bank_account_amount
                   value: 5000000

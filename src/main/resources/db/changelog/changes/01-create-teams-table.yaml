@@ -20,7 +20,7 @@ databaseChangeLog:
                     unique: true
               - column:
                   name: commission
-                  type: bigint
+                  type: double
                   constraints:
                     nullable: false
               - column:

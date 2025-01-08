@@ -11,6 +11,7 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -40,6 +41,7 @@ public class PlayerServiceImpl implements PlayerService {
     }
 
     @Override
+    @Transactional
     public void updateById(Long id, PlayerCreateDto createDto) {
         playerRepository.findById(id).orElseThrow(
                 () -> new EntityNotFoundException(
@@ -51,6 +53,7 @@ public class PlayerServiceImpl implements PlayerService {
     }
 
     @Override
+    @Transactional
     public void deleteById(Long id) {
         playerRepository.findById(id).orElseThrow(
                 () -> new EntityNotFoundException(

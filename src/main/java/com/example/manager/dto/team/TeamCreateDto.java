@@ -12,7 +12,7 @@ public class TeamCreateDto {
     @NotBlank
     private String name;
     @Positive
-    private Long commission;
+    private Double commission;
     @Positive
     private BigDecimal bankAccountAmount;
 }

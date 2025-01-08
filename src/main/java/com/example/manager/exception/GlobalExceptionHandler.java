@@ -44,7 +44,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         String errorMessage = exception.getMessage();
         String timeStamp = LocalDateTime.now().toString();
         String responseMessage = errorMessage + " - " + timeStamp;
-        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                 .body(responseMessage);
     }
 

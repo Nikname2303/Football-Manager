@@ -2,6 +2,7 @@ package com.example.manager.service.impl;
 
 import com.example.manager.dto.team.TeamCreateDto;
 import com.example.manager.dto.team.TeamResponseDto;
+import com.example.manager.exception.TransferException;
 import com.example.manager.mapper.TeamMapper;
 import com.example.manager.model.Team;
 import com.example.manager.repository.TeamRepository;
@@ -11,6 +12,7 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -40,6 +42,7 @@ public class TeamServiceImpl implements TeamService {
     }
 
     @Override
+    @Transactional
     public void updateById(Long id, TeamCreateDto createDto) {
         teamRepository.findById(id).orElseThrow(
                 () -> new EntityNotFoundException(
@@ -51,11 +54,16 @@ public class TeamServiceImpl implements TeamService {
     }
 
     @Override
+    @Transactional
     public void deleteById(Long id) {
-        teamRepository.findById(id).orElseThrow(
+        Team team = teamRepository.findById(id).orElseThrow(
                 () -> new EntityNotFoundException(
                         "You try to delete non-existent team with id " + id)
         );
+        if (!team.getSquad().isEmpty()) {
+            throw new TransferException("You try to delete team with active players."
+                    + " Please transfer or resign all players before deleting team");
+        }
         teamRepository.deleteById(id);
     }
 }

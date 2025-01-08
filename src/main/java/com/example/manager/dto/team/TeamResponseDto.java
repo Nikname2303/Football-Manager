@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 public class TeamResponseDto {
     private String name;
-    private Long commission;
+    private Double commission;
     private BigDecimal bankAccountAmount;
     private List<PlayerResponseDto> squad;
 }

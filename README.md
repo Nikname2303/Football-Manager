@@ -56,3 +56,4 @@ Run that command in terminal
 ```bash
 docker-compose up --build
 ```
+The application may take a few minutes to start and could crash during the startup process. Please wait patiently until it fully starts.
